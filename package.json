@@ -1,0 +1,26 @@
+{
+  "name": "style-guider2",
+  "private": true,
+  "dependencies": {
+    "@rails/webpacker": "^3.0.2",
+    "axios": "^0.17.1",
+    "babel-preset-react": "^6.24.1",
+    "bootstrap": "^3.3.7",
+    "bootstrap-sass": "^3.3.7",
+    "codemirror": "^5.32.0",
+    "coffeescript": "1.12.7",
+    "jquery": "^3.2.1",
+    "prop-types": "^15.6.0",
+    "react": "^16.1.1",
+    "react-codemirror2": "^3.0.7",
+    "react-dom": "^16.1.1",
+    "react-redux": "^5.0.6",
+    "react_ujs": "^2.4.3",
+    "redux": "^3.7.2",
+    "redux-devtools": "^3.4.1",
+    "rollbar": "^2.3.2"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "^2.9.5"
+  }
+}

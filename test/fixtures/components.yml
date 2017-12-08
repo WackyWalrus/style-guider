@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  house: one
+  project: one
+  title: MyText
+  description: MyText
+
+two:
+  house: two
+  project: two
+  title: MyText
+  description: MyText

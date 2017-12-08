@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  house: one
+  house_user_type: one
+
+two:
+  user: two
+  house: two
+  house_user_type: two
