@@ -12,12 +12,14 @@ class Project extends React.Component {
 		super(props)
 
 		this.state = {
-			components: []
+			components: [],
+			loading: true
 		}
 
 		if (this.props.components && this.props.components !== null) {
 			this.state = {
-				components: this.props.components
+				components: this.props.components,
+				loading: false
 			}
 		} else {
 			this.getComponents()
@@ -28,7 +30,8 @@ class Project extends React.Component {
 		let _ = this
 		axios.get('/houses/' + _.props.house.id + '/projects/' + _.props.project.id + '/components.json').then(function (response) {
 			_.setState({
-				components: response.data
+				components: response.data,
+				loading: false
 			})
 			_.props.dispatch({
 				type: 'SET_COMPONENTS',
@@ -53,7 +56,7 @@ class Project extends React.Component {
 					{this.props.project.name}
 					<a href={"/houses/" + this.props.house.id + "/projects/" + this.props.project.id + "/component"} onClick={this.changePage.bind(this)} data-href="houses#new_component" data-location={"/houses/" + this.props.house.id + "/projects/" + this.props.project.id + "/component"} className="btn btn-xs btn-primary" style={{marginLeft: '10px'}}>Add Component <span className="glyphicon glyphicon-plus"></span></a>
 				</h2>
-				<div className="components">
+				<div className={"components " + ((this.state.loading) ? 'loading' : '')}>
 					{this.state.components.map((component, index) => {
 						return (
 							<ErrorBoundary key={index}>
