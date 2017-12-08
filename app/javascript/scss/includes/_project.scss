@@ -1,0 +1,22 @@
+.filetypes {
+  margin: 0;
+  overflow: auto;
+  padding: 0;
+
+  a {
+    padding: 5px 10px;
+  }
+
+  li {
+    float: left;
+    list-style: none;
+    padding: 0;
+
+    &.active {
+      a {
+        background: $blue;
+        color: $white;
+      }
+    }
+  }
+}

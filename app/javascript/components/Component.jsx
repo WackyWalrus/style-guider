@@ -80,8 +80,8 @@ class Component extends React.Component {
 				<iframe ref="iframe" src={"/houses/" + this.props.house.id + "/projects/" + this.props.project.id + "/components/" + this.props.id + "/"} />
 
 				<ul className="filetypes">
-					<li><a href="#" onClick={this.changeMode.bind(this)} data-mode="htmlmixed">html</a></li>
-					<li><a href="#" onClick={this.changeMode.bind(this)} data-mode="sass">sass</a></li>
+					<li className={(this.state.mode === 'htmlmixed') ? 'active' : ''}><a href="#" onClick={this.changeMode.bind(this)} data-mode="htmlmixed">html</a></li>
+					<li className={(this.state.mode === 'sass') ? 'active' : ''}><a href="#" onClick={this.changeMode.bind(this)} data-mode="sass">sass</a></li>
 				</ul>
 				<CodeMirror
 					value={this.state.values[this.state.mode]}
