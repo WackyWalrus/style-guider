@@ -29,10 +29,6 @@ class Container extends React.Component {
 		}
 	}
 
-	componentDidCatch(error, info) {
-		console.log(error, info)
-	}
-
 	render () {
 		let _ = this
 
